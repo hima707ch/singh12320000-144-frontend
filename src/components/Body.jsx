@@ -1,19 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./Global/Header.jsx"
-import HomePage from "./HomePage/Body.jsx";
+import Hero from './Hero';
+import AboutUs from './AboutUs';
+import FeaturedProperties from './FeaturedProperties';
+import SearchSection from './SearchSection';
+import CallToAction from './CallToAction';
+import Footer from './Footer';
+import useHome from './useHome';
+import images from '../assets/images';
 
+export default function Body() {
+  const { properties, searchResults, handleSearch, loading } = useHome();
 
-const Body = () => {
-    return (
-        <Router>
-        <Header />
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                
-            </Routes>
-        </Router>
-    );
-};
-
-export default Body;
+  return (
+    <div id="Body_1" className="min-h-screen bg-white">
+      <Hero />
+      <SearchSection onSearch={handleSearch} loading={loading} />
+      <FeaturedProperties properties={searchResults.length > 0 ? searchResults : properties} />
+      <AboutUs />
+      <CallToAction />
+      <Footer />
+    </div>
+  );
+}
