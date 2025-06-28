@@ -18,7 +18,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2" id="Header_1">
             <img src={images[0]} alt="Logo" className="h-10 w-10 rounded-full hover:opacity-80 transition-opacity" />
-            <span className="text-white text-2xl font-bold hover:text-gray-200">RealEstate</span>
+            <span className="text-white text-2xl font-bold hover:text-gray-200">DIYFlex</span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8" id="Header_2">
