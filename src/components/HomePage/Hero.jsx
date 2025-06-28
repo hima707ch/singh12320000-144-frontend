@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <h1 id="Hero_2" className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">Find Your Dream
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">Find Your House
                 <span className="animate-bounce inline-block"> Home</span>
               </span>
             </h1>
